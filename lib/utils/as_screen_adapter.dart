@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const double screenutil_scale = 3.0;
 
-class ScreenAdapter {
+class ASScreenAdapter {
   static void init(context) {
     /// 配置屏幕适配的 设计稿的宽度和高度(单位px)
     final designW = 1242.0;

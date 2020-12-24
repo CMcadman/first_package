@@ -1,4 +1,4 @@
-import 'package:first_harry/utils/screen_adapter.dart';
+import 'package:first_harry/utils/as_screen_adapter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -99,7 +99,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
   Widget buildImageWidget() {
     return Container(
       color: Theme.of(context).accentColor,
-      padding: EdgeInsets.all(ScreenAdapter.width(5)),
+      padding: EdgeInsets.all(ASScreenAdapter.width(5)),
       child: Image.network(
         'https://flutter.github.io/assets-for-api-docs/assets/widgets/puffin.jpg',
         loadingBuilder: (context, child, loadingProgress) {
@@ -130,7 +130,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
             height: 10,
           ),
           Container(
-            padding: EdgeInsets.only(bottom: ScreenAdapter.height(5)),
+            padding: EdgeInsets.only(bottom: ASScreenAdapter.height(5)),
             height: 60,
             width: 60,
             color: Colors.grey,
@@ -140,7 +140,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(ScreenAdapter.width(10)),
+            padding: EdgeInsets.all(ASScreenAdapter.width(10)),
             child: CupertinoActivityIndicator(
               radius: 30,
             ),
@@ -174,7 +174,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
   Widget buildSliderWidget() {
     return Container(
       color: Theme.of(context).accentColor,
-      padding: EdgeInsets.symmetric(vertical: ScreenAdapter.height(5)),
+      padding: EdgeInsets.symmetric(vertical: ASScreenAdapter.height(5)),
       child: Column(
         children: [
           Text('Slider值: $_sliderValue'),
@@ -271,7 +271,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
 
   Widget buildRadioListTile() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: ScreenAdapter.height(5)),
+      padding: EdgeInsets.symmetric(vertical: ASScreenAdapter.height(5)),
       color: Theme.of(context).accentColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -324,7 +324,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
 
   Widget buildBasicBtnWidget() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: ScreenAdapter.height(5)),
+      padding: EdgeInsets.symmetric(vertical: ASScreenAdapter.height(5)),
       color: Theme.of(context).accentColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -366,7 +366,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
   /// 间隔
   Widget buildSizeBox() {
     return SizedBox(
-      height: ScreenAdapter.height(20),
+      height: ASScreenAdapter.height(20),
       child: Container(
         color: Theme.of(context).dividerColor,
       ),

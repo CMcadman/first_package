@@ -1,5 +1,5 @@
+import 'package:first_harry/utils/as_screen_adapter.dart';
 import 'package:first_harry/utils/as_sizebox.dart';
-import 'package:first_harry/utils/screen_adapter.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -40,8 +40,8 @@ class _TextPageState extends State<TextPage> {
   Widget _buildChildWidget(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-          horizontal: ScreenAdapter.width(15),
-          vertical: ScreenAdapter.height(10)),
+          horizontal: ASScreenAdapter.width(15),
+          vertical: ASScreenAdapter.height(10)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -118,9 +118,9 @@ class _TextPageState extends State<TextPage> {
         children: <InlineSpan>[
           WidgetSpan(
             child: Container(
-              margin: EdgeInsets.only(right: ScreenAdapter.width(10)),
+              margin: EdgeInsets.only(right: ASScreenAdapter.width(10)),
               padding:
-                  EdgeInsets.symmetric(horizontal: ScreenAdapter.width(10)),
+                  EdgeInsets.symmetric(horizontal: ASScreenAdapter.width(10)),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -134,7 +134,8 @@ class _TextPageState extends State<TextPage> {
           ),
           WidgetSpan(
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: ScreenAdapter.height(2)),
+              padding:
+                  EdgeInsets.symmetric(vertical: ASScreenAdapter.height(2)),
               child: Text(
                 '专注于体育赛事',
                 style: Theme.of(context).textTheme.bodyText1,
@@ -143,10 +144,10 @@ class _TextPageState extends State<TextPage> {
           ),
           WidgetSpan(
             child: Container(
-              margin: EdgeInsets.only(left: ScreenAdapter.width(10)),
+              margin: EdgeInsets.only(left: ASScreenAdapter.width(10)),
               padding: EdgeInsets.symmetric(
-                  horizontal: ScreenAdapter.width(10),
-                  vertical: ScreenAdapter.height(1)),
+                  horizontal: ASScreenAdapter.width(10),
+                  vertical: ASScreenAdapter.height(1)),
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.all(Radius.circular(20)),

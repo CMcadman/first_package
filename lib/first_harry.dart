@@ -1,6 +1,6 @@
 library first_harry;
 
-import 'package:first_harry/utils/screen_adapter.dart';
+import 'package:first_harry/utils/as_screen_adapter.dart';
 import 'package:flutter/material.dart';
 
 export 'first_test/first_test.dart';
@@ -14,5 +14,5 @@ class Calculator {
 
 /// screen_util初始化
 class CMScreenUtils {
-  void init(BuildContext context) => ScreenAdapter.init(context);
+  void init(BuildContext context) => ASScreenAdapter.init(context);
 }
