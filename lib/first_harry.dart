@@ -1,6 +1,7 @@
 library first_harry;
 
 export 'first_test/first_test.dart';
+export 'caculator/caculator_page.dart';
 
 /// A Calculator.
 class Calculator {
