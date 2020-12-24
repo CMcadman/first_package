@@ -17,6 +17,10 @@ export 'layout_widget/stack_page.dart';
 export 'layout_widget/wrap_page.dart';
 export 'layout_widget/flow_page.dart';
 
+export 'location_widget/container_size_page.dart';
+export 'location_widget/expand_page.dart';
+export 'location_widget/cylinder_chart.dart';
+
 /// A Calculator.
 class Calculator {
   /// Returns [value] plus 1.
