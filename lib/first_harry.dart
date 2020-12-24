@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 
 export 'first_test/first_test.dart';
 
-export 'caculator/caculator_page.dart';
-
 export 'basic_widget/text_page.dart';
 export 'basic_widget/basic_page_zero.dart';
 export 'basic_widget/basic_page_one.dart';
@@ -21,6 +19,8 @@ export 'location_widget/container_size_page.dart';
 export 'location_widget/expand_page.dart';
 export 'location_widget/cylinder_chart.dart';
 
+export 'gesture_widget/gesture_page.dart';
+
 export 'scroll_widget/gridview_page.dart';
 export 'scroll_widget/pageview_page.dart';
 export 'scroll_widget/as_pageview_page/as_pageview_page.dart';
@@ -31,6 +31,12 @@ export 'sliver_widget/sliver_appbar.dart';
 export 'sliver_widget/sliver_list_grid_page.dart';
 export 'sliver_widget/nested_scrollview_page/nested_scrollview_page.dart';
 export 'sliver_widget/sliver_persistent_head/sliver_persistent_head.dart';
+
+export 'function_widget/caculator/caculator_page.dart';
+export 'function_widget/date_picker_page.dart';
+export 'function_widget/easyrefresh_page.dart';
+export 'function_widget/pop_menu_page.dart';
+export 'function_widget/time_picker_page.dart';
 
 /// A Calculator.
 class Calculator {

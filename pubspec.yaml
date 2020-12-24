@@ -13,6 +13,8 @@ dependencies:
     sdk: flutter
   # Flutter 屏幕适配 https://github.com/OpenFlutter/flutter_screenutil
   flutter_screenutil: ^3.1.0
+  # 下拉刷新 上拉加载 https://github.com/xuelongqy/flutter_easyrefresh
+  flutter_easyrefresh: ^2.1.7
 
 dev_dependencies:
   flutter_test:
