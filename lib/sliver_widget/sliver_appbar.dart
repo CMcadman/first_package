@@ -21,7 +21,7 @@ class SliverAppBarPage extends StatelessWidget {
                 ),
               ),
               background: Image.network(
-                'http://img.haote.com/upload/20180918/2018091815372344164.jpg',
+                'https://img.haote.com/upload/20180918/2018091815372344164.jpg',
                 fit: BoxFit.fitHeight,
               ),
             ),
