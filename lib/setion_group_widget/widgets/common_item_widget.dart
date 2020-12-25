@@ -378,10 +378,14 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
 
   /// 构建rightArrowIcon
   Widget _buildCommonRightArrowWidget() {
-    return Image.asset(
-      ASConstant.images + 'tableview_arrow_8x13.png',
-      width: ASScreenAdapter.width(8),
-      height: ASScreenAdapter.height(13),
+    // return Image.asset(
+    //   ASConstant.images + 'tableview_arrow_8x13.png',
+    //   width: ASScreenAdapter.width(8),
+    //   height: ASScreenAdapter.height(13),
+    // );
+    return Icon(
+      Icons.arrow_right_alt,
+      size: 13.0,
     );
   }
 }
