@@ -38,6 +38,14 @@ export 'function_widget/easyrefresh_page.dart';
 export 'function_widget/pop_menu_page.dart';
 export 'function_widget/time_picker_page.dart';
 
+export 'animation_widget/curved_animation_page.dart';
+export 'animation_widget/interval_animation_page.dart';
+export 'animation_widget/list_animation_page.dart';
+export 'animation_widget/record_animation_page.dart';
+export 'animation_widget/basic_animation/basic_animation_page.dart';
+export 'animation_widget/hero_animation/hero_animation_page1.dart';
+export 'animation_widget/material_motion/material_motion_page.dart';
+
 /// A Calculator.
 class Calculator {
   /// Returns [value] plus 1.
