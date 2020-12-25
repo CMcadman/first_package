@@ -222,7 +222,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
       child: Padding(
         padding: EdgeInsets.only(right: ASScreenAdapter.width(10)),
         child: _buildCommonIconWidget(
-          'assets/images/icon_selected_20x20.png',
+          ASConstant.images + 'icon_selected_20x20.png',
           width: ASScreenAdapter.width(20),
           height: ASScreenAdapter.width(20),
         ),
@@ -282,7 +282,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
         fit: BoxFit.cover,
         placeholder: (context, url) {
           return Image.asset(
-            'assets/images/default_100x100.png',
+            ASConstant.images + 'default_100x100.png',
             width: ASScreenAdapter.width(width),
             height: ASScreenAdapter.height(height),
           );
@@ -290,7 +290,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
         errorWidget: (context, url, error) {
           print('$error');
           return Image.asset(
-            'assets/images/default_100x100.png',
+            ASConstant.images + 'default_100x100.png',
             width: ASScreenAdapter.width(width),
             height: ASScreenAdapter.height(height),
           );
@@ -379,7 +379,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
   /// 构建rightArrowIcon
   Widget _buildCommonRightArrowWidget() {
     return Image.asset(
-      'assets/images/tableview_arrow_8x13.png',
+      ASConstant.images + 'tableview_arrow_8x13.png',
       width: ASScreenAdapter.width(8),
       height: ASScreenAdapter.height(13),
     );

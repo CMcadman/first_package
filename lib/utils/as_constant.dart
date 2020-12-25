@@ -5,4 +5,6 @@ class ASConstant {
   static const String adhots = 'assets/adhots/';
 
   static const String others = 'assets/others/';
+
+  static const String images = 'assets/images/';
 }
