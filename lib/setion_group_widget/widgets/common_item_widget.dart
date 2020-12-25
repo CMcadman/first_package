@@ -304,6 +304,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
         width: ASScreenAdapter.width(width),
         height: ASScreenAdapter.height(height),
         color: iconColor,
+        package: ASConstant.packageName,
       );
     }
     return iconWidget;
