@@ -18,6 +18,10 @@ dependencies:
   # 动画Animations https://pub.dev/packages/animations
   # Material Mation 规范 https://material.io/design/motion/the-motion-system.html
   animations: ^1.1.1
+  # 本地偏好设置 https://github.com/flutter/plugins/tree/master/packages/shared_preferences
+  shared_preferences: ^0.5.12
+  # 图片缓存 https://github.com/renefloor/flutter_cached_network_image
+  cached_network_image: ^2.3.3
 
 dev_dependencies:
   flutter_test:
