@@ -284,6 +284,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
         placeholder: (context, url) {
           return Image.asset(
             ASConstant.images + 'default_100x100.png',
+            package: ASConstant.packageName,
             width: ASScreenAdapter.width(width),
             height: ASScreenAdapter.height(height),
           );
@@ -292,6 +293,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
           print('$error');
           return Image.asset(
             ASConstant.images + 'default_100x100.png',
+            package: ASConstant.packageName,
             width: ASScreenAdapter.width(width),
             height: ASScreenAdapter.height(height),
           );
@@ -381,6 +383,7 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
   Widget _buildCommonRightArrowWidget() {
     return Image.asset(
       ASConstant.images + 'tableview_arrow_8x13.png',
+      package: ASConstant.packageName,
       width: ASScreenAdapter.width(8),
       height: ASScreenAdapter.height(13),
     );

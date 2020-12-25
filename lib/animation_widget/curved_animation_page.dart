@@ -180,7 +180,10 @@ class _CurvedAnimationPageState extends State<CurvedAnimationPage>
         decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage(iconPath),
+              image: AssetImage(
+                iconPath,
+                package: ASConstant.packageName,
+              ),
             ),
             borderRadius: BorderRadius.all(Radius.circular(20)),
             border: Border.all(

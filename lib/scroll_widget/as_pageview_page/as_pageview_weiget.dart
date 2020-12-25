@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:first_harry/utils/as_constant.dart';
 
 class ASPageViewWidget extends StatefulWidget {
   final List<String> imgList;
@@ -85,7 +86,10 @@ class _ASPageViewWidgetState extends State<ASPageViewWidget> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             image: DecorationImage(
-              image: AssetImage(widget.imgList[index % widget.imgList.length]),
+              image: AssetImage(
+                widget.imgList[index % widget.imgList.length],
+                package: ASConstant.packageName,
+              ),
               fit: BoxFit.fitHeight,
             ),
           ),

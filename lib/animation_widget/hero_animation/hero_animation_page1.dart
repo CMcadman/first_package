@@ -30,6 +30,7 @@ class _HeroAnimationPage1State extends State<HeroAnimationPage1> {
                   child: Container(
                     child: Image.asset(
                       ASConstant.adhots + 'adhots_5.jpg',
+                      package: ASConstant.packageName,
                       fit: BoxFit.fitWidth,
                     ),
                   ),

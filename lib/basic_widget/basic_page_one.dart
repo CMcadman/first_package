@@ -59,6 +59,7 @@ class _BasicPageOneState extends State<BasicPageOne> {
           height: 400,
           child: Image.asset(
             ASConstant.others + 'other_3.jpeg',
+            package: ASConstant.packageName,
             fit: BoxFit.fill,
           ),
         ),

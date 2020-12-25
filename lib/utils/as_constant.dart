@@ -7,4 +7,6 @@ class ASConstant {
   static const String others = 'assets1/others1/';
 
   static const String images = 'assets1/images1/';
+
+  static const String packageName = 'first_harry';
 }

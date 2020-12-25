@@ -14,6 +14,7 @@ class MaterialMotionDetailPage extends StatelessWidget {
         height: ScreenUtil().screenHeight,
         child: Image.asset(
           ASConstant.others + 'other_1.jpg',
+          package: ASConstant.packageName,
           fit: BoxFit.fill,
         ),
       ),

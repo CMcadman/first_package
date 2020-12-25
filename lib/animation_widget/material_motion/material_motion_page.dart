@@ -111,6 +111,7 @@ class _MaterialMotionPageState extends State<MaterialMotionPage> {
             return Container(
               child: Image.asset(
                 ASConstant.others + 'other_1.jpg',
+                package: ASConstant.packageName,
                 fit: BoxFit.fitWidth,
               ),
             );
