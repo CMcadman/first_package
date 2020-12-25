@@ -4,6 +4,7 @@ import 'package:first_harry/setion_group_widget/common/common_item.dart';
 import 'package:first_harry/utils/as_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CommonItemWidget extends StatefulWidget {
   final CommonItem item;
@@ -378,14 +379,10 @@ class CommonItemWidgetState extends State<CommonItemWidget> {
 
   /// 构建rightArrowIcon
   Widget _buildCommonRightArrowWidget() {
-    // return Image.asset(
-    //   ASConstant.images + 'tableview_arrow_8x13.png',
-    //   width: ASScreenAdapter.width(8),
-    //   height: ASScreenAdapter.height(13),
-    // );
-    return Icon(
-      Icons.arrow_right_alt,
-      size: 13.0,
+    return Image.asset(
+      ASConstant.images + 'tableview_arrow_8x13.png',
+      width: ASScreenAdapter.width(8),
+      height: ASScreenAdapter.height(13),
     );
   }
 }
