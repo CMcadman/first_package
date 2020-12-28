@@ -32,3 +32,6 @@ first_harry:
       ref: master
 ```
 
+### DataTable
+- 排序的图标显示需要同时设置sortColumnIndex，以及对应的DataColumn中的onSort，否则不显示
+
