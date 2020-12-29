@@ -35,3 +35,6 @@ first_harry:
 ### DataTable
 - 排序的图标显示需要同时设置sortColumnIndex，以及对应的DataColumn中的onSort，否则不显示
 
+### DragTarget
+- DragTarget与Draggable配合使用时，Draggable中必须设置data,不然会导致onwillAccept返回null报错
+
