@@ -11,6 +11,8 @@ class _ASFromPageState extends State<ASFromPage> {
   var _password = '';
   final _formKey = GlobalKey<FormState>();
 
+  var _value = '足球';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,6 +92,31 @@ class _ASFromPageState extends State<ASFromPage> {
             child: Text('登录'),
             onPressed: () {
               validate();
+            },
+          ),
+          SizedBox(
+            height: 60,
+          ),
+          DropdownButtonFormField(
+            value: _value,
+            items: [
+              DropdownMenuItem(
+                child: Text('足球'),
+                value: '足球',
+              ),
+              DropdownMenuItem(
+                child: Text('篮球'),
+                value: '篮球',
+              ),
+              DropdownMenuItem(
+                child: Text('羽毛球'),
+                value: '羽毛球',
+              ),
+            ],
+            onChanged: (value) {
+              setState(() {
+                _value = value;
+              });
             },
           ),
         ],
