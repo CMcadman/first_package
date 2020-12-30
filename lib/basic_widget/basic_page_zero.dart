@@ -99,7 +99,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
       color: Theme.of(context).accentColor,
       child: FittedBox(
         child: Container(
-          height: 50,
+          height: 40,
           width: 80,
           color: Colors.amber,
         ),
