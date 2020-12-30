@@ -15,6 +15,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
   RangeValues _rangeValues = RangeValues(0, 60);
   var _switchValue = false;
   var _dropValue = '英超';
+  var _expanded = false;
   final List<String> _dropLists = ['英超', '西甲', '德甲', '中超', '意甲'];
 
   @override
@@ -28,6 +29,13 @@ class _BasicPageZeroState extends State<BasicPageZero> {
             child: DropdownButton(
                 elevation: 10,
                 value: _dropValue,
+                underline: Divider(
+                  color: Colors.amber,
+                  height: 5,
+                  thickness: 1,
+                  indent: 1,
+                  endIndent: 5,
+                ),
                 dropdownColor: Colors.green,
                 iconEnabledColor: Colors.yellow,
                 iconDisabledColor: Colors.grey,
@@ -357,6 +365,17 @@ class _BasicPageZeroState extends State<BasicPageZero> {
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {},
+          ),
+          ExpandIcon(
+            isExpanded: _expanded,
+            onPressed: (value) {
+              setState(() {
+                _expanded = !_expanded;
+              });
+            },
+            size: 30,
+            color: Colors.amber,
+            expandedColor: Colors.yellow,
           ),
         ],
       ),

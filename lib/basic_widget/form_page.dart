@@ -11,7 +11,7 @@ class _ASFromPageState extends State<ASFromPage> {
   var _password = '';
   final _formKey = GlobalKey<FormState>();
 
-  var _value = '足球';
+  var _value;
 
   @override
   Widget build(BuildContext context) {
@@ -97,27 +97,31 @@ class _ASFromPageState extends State<ASFromPage> {
           SizedBox(
             height: 60,
           ),
-          DropdownButtonFormField(
-            value: _value,
-            items: [
-              DropdownMenuItem(
-                child: Text('足球'),
-                value: '足球',
-              ),
-              DropdownMenuItem(
-                child: Text('篮球'),
-                value: '篮球',
-              ),
-              DropdownMenuItem(
-                child: Text('羽毛球'),
-                value: '羽毛球',
-              ),
-            ],
-            onChanged: (value) {
-              setState(() {
-                _value = value;
-              });
-            },
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: DropdownButtonFormField(
+              hint: Text('请选择'),
+              value: _value,
+              items: [
+                DropdownMenuItem(
+                  child: Text('足球'),
+                  value: '足球',
+                ),
+                DropdownMenuItem(
+                  child: Text('篮球'),
+                  value: '篮球',
+                ),
+                DropdownMenuItem(
+                  child: Text('羽毛球'),
+                  value: '羽毛球',
+                ),
+              ],
+              onChanged: (value) {
+                setState(() {
+                  _value = value;
+                });
+              },
+            ),
           ),
         ],
       ),

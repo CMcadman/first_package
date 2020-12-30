@@ -39,4 +39,12 @@ first_harry:
 - DragTarget与Draggable配合使用时，Draggable中必须设置data,不然会导致onwillAccept返回null报错
 - LongPressDraggable继承自Draggable，唯一不同的是触发方式，长按触发
 
+### DropdownButtonHideUnderline
+- 此控件为减少控件，如果DropdownButton是DropdownButtonHideUnderline的子控件，那么DropdownButton的下划线将不起作用
+
+### ExpansionPanelList
+- ExpansionPanelList需要被SingleChildScrollView包裹
+- expansionCallback为展开/关闭回调，返回展开/关闭子控件的索引及状态
+- ExpansionPanel中headerBuilder为关闭时显示内容，body为展开时显示的内容
+
 
