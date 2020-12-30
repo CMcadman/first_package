@@ -131,7 +131,8 @@ class _BasicPageZeroState extends State<BasicPageZero> {
       height: 200,
       width: 200,
       child: FadeInImage(
-        placeholder: AssetImage(ASConstant.images + 'default_100x100.png'),
+        placeholder: AssetImage(ASConstant.images + 'default_100x100.png',
+            package: ASConstant.packageName),
         image: NetworkImage(
             'https://flutter.github.io/assets-for-api-docs/assets/widgets/puffin.jpg'),
       ),
