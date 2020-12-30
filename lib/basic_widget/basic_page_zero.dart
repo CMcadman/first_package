@@ -1,3 +1,4 @@
+import 'package:first_harry/first_harry.dart';
 import 'package:first_harry/utils/as_screen_adapter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -82,7 +83,26 @@ class _BasicPageZeroState extends State<BasicPageZero> {
           buildProgressIndicator(),
           buildSizeBox(),
           buildImageWidget(),
+          ASSizeBox(),
+          buildFadeInImage(),
+          ASSizeBox(),
+          buildFittedBox(),
         ],
+      ),
+    );
+  }
+
+  Widget buildFittedBox() {
+    return Container(
+      height: 200,
+      width: 200,
+      color: Theme.of(context).accentColor,
+      child: FittedBox(
+        child: Container(
+          height: 50,
+          width: 80,
+          color: Colors.amber,
+        ),
       ),
     );
   }
@@ -100,6 +120,20 @@ class _BasicPageZeroState extends State<BasicPageZero> {
           RaisedButton(onPressed: () {}, child: Text('4444')),
           RaisedButton(onPressed: () {}, child: Text('55555')),
         ],
+      ),
+    );
+  }
+
+  Widget buildFadeInImage() {
+    return Container(
+      color: Theme.of(context).accentColor,
+      alignment: Alignment.center,
+      height: 200,
+      width: 200,
+      child: FadeInImage(
+        placeholder: AssetImage(ASConstant.images + 'default_100x100.png'),
+        image: NetworkImage(
+            'https://flutter.github.io/assets-for-api-docs/assets/widgets/puffin.jpg'),
       ),
     );
   }

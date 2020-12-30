@@ -123,6 +123,20 @@ class _ASFromPageState extends State<ASFromPage> {
               },
             ),
           ),
+          ASSizeBox(),
+          ExpansionTile(
+            title: Text('分类'),
+            subtitle: Text('体育'),
+            leading: Icon(Icons.sports),
+            backgroundColor: Theme.of(context).accentColor,
+            children: [
+              Text('足球'),
+              Text('蓝球'),
+            ],
+            onExpansionChanged: (value) {
+              print('onExpansionChanged回调: $value');
+            },
+          ),
         ],
       ),
       onWillPop: () async {

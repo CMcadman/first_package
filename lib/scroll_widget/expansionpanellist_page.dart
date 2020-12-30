@@ -11,7 +11,7 @@ class _ExpansionPanelListPageState extends State<ExpansionPanelListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('展开/收缩'),
+        title: Text('展开/收缩组件'),
       ),
       body: Container(
         color: Theme.of(context).primaryColor,
