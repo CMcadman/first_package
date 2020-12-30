@@ -23,7 +23,7 @@ export 'basic_widget/basic_page_one.dart';
 export 'basic_widget/basic_page_two.dart';
 export 'basic_widget/form_page.dart';
 export 'basic_widget/datatable_page/datatable_page.dart';
-export 'basic_widget/draggable_page.dart';
+export 'basic_widget/draggable/draggable_page.dart';
 
 export 'layout_widget/stack_page.dart';
 export 'layout_widget/wrap_page.dart';

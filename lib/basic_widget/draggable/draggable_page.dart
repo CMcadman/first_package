@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:first_harry/basic_widget/draggable/draggable_scrollable_sheet.dart';
 import 'package:flutter/material.dart';
 
 class DraggablePage extends StatefulWidget {
@@ -26,6 +29,18 @@ class _DraggablePageState extends State<DraggablePage> {
       padding: EdgeInsets.all(20),
       child: Column(
         children: [
+          RaisedButton(
+            child: Text('DraggableScrollableSheet'),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DraggableScrollableSheetPage();
+                  },
+                ),
+              );
+            },
+          ),
           buildChildWidget(),
           SizedBox(
             height: 200,

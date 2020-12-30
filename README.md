@@ -37,4 +37,6 @@ first_harry:
 
 ### DragTarget
 - DragTarget与Draggable配合使用时，Draggable中必须设置data,不然会导致onwillAccept返回null报错
+- LongPressDraggable继承自Draggable，唯一不同的是触发方式，长按触发
+
 
