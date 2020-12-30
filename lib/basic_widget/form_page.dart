@@ -131,7 +131,7 @@ class _ASFromPageState extends State<ASFromPage> {
             title: Text(_exoansionedValue),
             subtitle: Text('体育'),
             leading: Icon(Icons.sports),
-            backgroundColor: Theme.of(context).accentColor,
+            backgroundColor: Colors.amber,
             children: [
               InkWell(
                 child: Text('足球'),
