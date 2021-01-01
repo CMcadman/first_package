@@ -62,6 +62,7 @@ class _ASTabBarState extends State<ASTabBar> with TickerProviderStateMixin {
                 widget.tabs.length *
                 _lastIndex)
         .animate(_animationController);
+    _animationController.forward();
   }
 
   @override
