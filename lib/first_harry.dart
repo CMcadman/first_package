@@ -12,6 +12,7 @@ export 'utils/as_utils.dart';
 export 'utils/bar_button.dart';
 
 export 'custom_widget/as_tabbar.dart';
+export 'custom_widget/as_tabbar_other.dart';
 
 export 'setion_group_widget/common/common_footer.dart';
 export 'setion_group_widget/common/common_group.dart';
