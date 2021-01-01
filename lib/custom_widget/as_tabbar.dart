@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ASTabBar extends StatefulWidget {
   final List<Widget> tabs;
@@ -58,9 +59,7 @@ class _ASTabBarState extends State<ASTabBar> with TickerProviderStateMixin {
       });
     _animation = Tween(
             begin: 0.0,
-            end: MediaQuery.of(context).size.width /
-                widget.tabs.length *
-                _lastIndex)
+            end: ScreenUtil().screenWidth / widget.tabs.length * _lastIndex)
         .animate(_animationController);
     _animationController.forward();
   }
