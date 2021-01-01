@@ -97,7 +97,8 @@ class _ASTabBarState extends State<ASTabBar> with TickerProviderStateMixin {
             bottom: 0,
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(5)),
+                borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(widget.indicatorHeight)),
                 color: _indicatorColor,
               ),
               height: widget.indicatorHeight,
