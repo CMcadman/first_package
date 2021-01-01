@@ -56,7 +56,12 @@ class _ASTabBarState extends State<ASTabBar> with TickerProviderStateMixin {
           return;
         }
       });
-    _animation = Tween(begin: 0.0, end: 0.0).animate(_animationController);
+    _animation = Tween(
+            begin: 0.0,
+            end: MediaQuery.of(context).size.width /
+                widget.tabs.length *
+                _lastIndex)
+        .animate(_animationController);
   }
 
   @override
