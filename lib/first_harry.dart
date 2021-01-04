@@ -33,6 +33,7 @@ export 'basic_widget/future_builder_page.dart';
 export 'layout_widget/stack_page.dart';
 export 'layout_widget/wrap_page.dart';
 export 'layout_widget/flow_page.dart';
+export 'layout_widget/as_tabbar_page.dart';
 
 export 'location_widget/container_size_page.dart';
 export 'location_widget/expand_page.dart';

@@ -1,4 +1,5 @@
 import 'package:first_harry/utils/as_sizebox.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class GesturePage extends StatefulWidget {
@@ -10,6 +11,7 @@ enum ButtonStatus { none, loading, done }
 
 class _GesturePageState extends State<GesturePage> {
   ButtonStatus _buttonStatus = ButtonStatus.none;
+  var _last = '';
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,9 @@ class _GesturePageState extends State<GesturePage> {
       ),
       body: Container(
         // color: Theme.of(context).primaryColor,
-        child: buildChildWidget(),
+        child: SingleChildScrollView(
+          child: buildChildWidget(),
+        ),
       ),
     );
   }
@@ -35,9 +39,51 @@ class _GesturePageState extends State<GesturePage> {
         buildListener(),
         ASSizeBox(),
         buildMaterialBtn(),
+        ASSizeBox(),
+        buildRawGestureDetector(),
+        ASSizeBox(),
       ],
     );
     // return buildInkWell();
+  }
+
+  Widget buildRawGestureDetector() {
+    return RawGestureDetector(
+      gestures: <Type, GestureRecognizerFactory>{
+        TapGestureRecognizer:
+            GestureRecognizerFactoryWithHandlers<TapGestureRecognizer>(
+                () => TapGestureRecognizer(), (TapGestureRecognizer instance) {
+          instance
+            ..onTap = () {
+              setState(() {
+                _last = 'tap';
+              });
+            }
+            ..onTapDown = (TapDownDetails details) {
+              setState(() {
+                _last = 'down';
+              });
+            }
+            ..onTapUp = (TapUpDetails details) {
+              setState(() {
+                _last = 'up';
+              });
+            }
+            ..onTapCancel = () {
+              setState(() {
+                _last = 'cancel';
+              });
+            };
+        }),
+      },
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.amber,
+        alignment: Alignment.center,
+        child: Text(_last),
+      ),
+    );
   }
 
   Widget buildGesture() {

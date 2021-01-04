@@ -23,6 +23,7 @@ class _StackPageState extends State<StackPage> {
 
   Widget buildChildWidget(BuildContext context) {
     return SingleChildScrollView(
+      padding: EdgeInsets.symmetric(vertical: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
