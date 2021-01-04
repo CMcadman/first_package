@@ -22,13 +22,35 @@ class _StackPageState extends State<StackPage> {
   }
 
   Widget buildChildWidget(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           buildChild1(),
           ASSizeBox(),
           buildChild2(),
+          ASSizeBox(),
+          buildChildPositonedDirectional(),
+        ],
+      ),
+    );
+  }
+
+  Widget buildChildPositonedDirectional() {
+    return Container(
+      height: 300,
+      width: 300,
+      child: Stack(
+        children: [
+          PositionedDirectional(
+            start: 10,
+            end: 10,
+            top: 10,
+            bottom: 10,
+            child: Container(
+              color: Colors.amber,
+            ),
+          ),
         ],
       ),
     );

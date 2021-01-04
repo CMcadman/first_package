@@ -39,7 +39,7 @@ class _PaginatedDataTablePageState extends State<PaginatedDataTablePage> {
 
   Widget buildChildWidget() {
     return PaginatedDataTable(
-      header: Text('Header'),
+      header: Text('成绩单'),
       actions: [
         IconButton(icon: Icon(Icons.add), onPressed: () {}),
         IconButton(icon: Icon(Icons.delete), onPressed: () {})
