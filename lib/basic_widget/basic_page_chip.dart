@@ -2,12 +2,12 @@ import 'package:first_harry/utils/as_sizebox.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class BasicPageTwo extends StatefulWidget {
+class BasicPageChip extends StatefulWidget {
   @override
-  _BasicPageTwoState createState() => _BasicPageTwoState();
+  _BasicPageChipState createState() => _BasicPageChipState();
 }
 
-class _BasicPageTwoState extends State<BasicPageTwo> {
+class _BasicPageChipState extends State<BasicPageChip> {
   var _rawChipSelected = false;
   var _selectIndex = 0;
   final _filters = <String>[];

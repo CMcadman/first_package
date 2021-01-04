@@ -38,6 +38,7 @@ class _StackPageState extends State<StackPage> {
 
   Widget buildChildPositonedDirectional() {
     return Container(
+      color: Theme.of(context).accentColor,
       height: 300,
       width: 300,
       child: Stack(

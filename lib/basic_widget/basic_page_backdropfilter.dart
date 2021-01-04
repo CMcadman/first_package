@@ -3,17 +3,18 @@ import 'dart:ui';
 import 'package:first_harry/utils/as_constant.dart';
 import 'package:flutter/material.dart';
 
-class BasicPageOne extends StatefulWidget {
+class BasicPageBackdropfilter extends StatefulWidget {
   @override
-  _BasicPageOneState createState() => _BasicPageOneState();
+  _BasicPageBackdropfilterState createState() =>
+      _BasicPageBackdropfilterState();
 }
 
-class _BasicPageOneState extends State<BasicPageOne> {
+class _BasicPageBackdropfilterState extends State<BasicPageBackdropfilter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('基础组件1'),
+        title: Text('模糊效果'),
       ),
       body: Container(
         color: Theme.of(context).primaryColor,

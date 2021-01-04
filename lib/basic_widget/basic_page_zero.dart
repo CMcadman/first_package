@@ -87,7 +87,47 @@ class _BasicPageZeroState extends State<BasicPageZero> {
           buildFadeInImage(),
           ASSizeBox(),
           buildFittedBox(),
+          ASSizeBox(),
+          buildChildPhysical(),
         ],
+      ),
+    );
+  }
+
+  Widget buildChildPhysical() {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          buildChildPhysicalModel(),
+          buildChildPhysicalShape(),
+        ],
+      ),
+    );
+  }
+
+  Widget buildChildPhysicalShape() {
+    return PhysicalShape(
+      clipper: ShapeBorderClipper(shape: CircleBorder()),
+      color: Theme.of(context).accentColor,
+      elevation: 10,
+      shadowColor: Colors.amber,
+      child: Container(
+        width: 100,
+        height: 100,
+      ),
+    );
+  }
+
+  Widget buildChildPhysicalModel() {
+    return PhysicalModel(
+      color: Theme.of(context).accentColor,
+      borderRadius: BorderRadius.circular(20),
+      elevation: 10,
+      shadowColor: Colors.amber,
+      child: Container(
+        height: 100,
+        width: 100,
       ),
     );
   }
