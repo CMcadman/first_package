@@ -53,6 +53,42 @@ class _TextPageState extends State<TextPage> {
           buildSizeBox(),
           buildPasswordFiled(),
           buildSizeBox(),
+          buildRotatedBox(),
+          buildSizeBox(),
+        ],
+      ),
+    );
+  }
+
+  Widget buildRotatedBox() {
+    return Container(
+      color: Theme.of(context).accentColor,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          DecoratedBox(
+            decoration: BoxDecoration(
+              color: Colors.amber,
+            ),
+            child: RotatedBox(
+              ///旋转90度(1/4圈)
+              quarterTurns: 1,
+              child: Text('hello'),
+            ),
+          ),
+          Text(
+            'world',
+            style: Theme.of(context).textTheme.subtitle1,
+          ),
+          DecoratedBox(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Transform.rotate(
+              angle: 90,
+              child: Text('hello'),
+            ),
+          ),
         ],
       ),
     );
