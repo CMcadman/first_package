@@ -6,8 +6,38 @@ class StackPage extends StatefulWidget {
   _StackPageState createState() => _StackPageState();
 }
 
-class _StackPageState extends State<StackPage> {
+class _StackPageState extends State<StackPage> with TickerProviderStateMixin {
   int _index = 0;
+  AnimationController _animationController;
+  Animation _animation;
+
+  @override
+  void initState() {
+    _animationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 2))
+          ..addListener(() {
+            if (_animationController.status == AnimationStatus.completed) {
+              _animationController.reverse();
+            } else if (_animationController.status ==
+                AnimationStatus.dismissed) {
+              _animationController.forward();
+            }
+          });
+
+    _animation = RectTween(
+            begin: Rect.fromLTWH(10.0, 10.0, 10.0, 10.0),
+            end: Rect.fromLTWH(300.0, 300.0, 0.0, 0.0))
+        .animate(_animationController);
+    _animationController.forward();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,11 +57,32 @@ class _StackPageState extends State<StackPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          ASSizeBox(),
+          buildChildPositonedDirectional(),
+          ASSizeBox(),
           buildChild1(),
           ASSizeBox(),
           buildChild2(),
           ASSizeBox(),
           buildChildPositonedDirectional(),
+        ],
+      ),
+    );
+  }
+
+  Widget buildRelativePositionedTransition() {
+    return Container(
+      height: 300,
+      width: 300,
+      color: Theme.of(context).accentColor,
+      child: Stack(
+        children: [
+          RelativePositionedTransition(
+              rect: _animation,
+              size: Size(0.0, 0.0),
+              child: Container(
+                color: Colors.amber,
+              )),
         ],
       ),
     );
