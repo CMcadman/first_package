@@ -13,6 +13,7 @@ class _StackPageState extends State<StackPage> with TickerProviderStateMixin {
 
   @override
   void initState() {
+    super.initState();
     _animationController =
         AnimationController(vsync: this, duration: Duration(seconds: 2))
           ..addListener(() {
@@ -29,7 +30,6 @@ class _StackPageState extends State<StackPage> with TickerProviderStateMixin {
             end: Rect.fromLTWH(300.0, 300.0, 0.0, 0.0))
         .animate(_animationController);
     _animationController.forward();
-    super.initState();
   }
 
   @override
@@ -58,7 +58,7 @@ class _StackPageState extends State<StackPage> with TickerProviderStateMixin {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ASSizeBox(),
-          buildChildPositonedDirectional(),
+          buildRelativePositionedTransition(),
           ASSizeBox(),
           buildChild1(),
           ASSizeBox(),
@@ -78,11 +78,12 @@ class _StackPageState extends State<StackPage> with TickerProviderStateMixin {
       child: Stack(
         children: [
           RelativePositionedTransition(
-              rect: _animation,
-              size: Size(0.0, 0.0),
-              child: Container(
-                color: Colors.amber,
-              )),
+            rect: _animation,
+            size: Size(0.0, 0.0),
+            child: Container(
+              color: Colors.amber,
+            ),
+          ),
         ],
       ),
     );
