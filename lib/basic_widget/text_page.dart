@@ -45,6 +45,9 @@ class _TextPageState extends State<TextPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          buildSizeBox(),
+          buildRotatedBox(),
+          buildSizeBox(),
           buildGraident(),
           buildSizeBox(),
           buildTextRich(),
@@ -52,8 +55,6 @@ class _TextPageState extends State<TextPage> {
           buildTextRichSpan(),
           buildSizeBox(),
           buildPasswordFiled(),
-          buildSizeBox(),
-          buildRotatedBox(),
           buildSizeBox(),
         ],
       ),
@@ -85,7 +86,7 @@ class _TextPageState extends State<TextPage> {
               color: Colors.blue,
             ),
             child: Transform.rotate(
-              angle: 90,
+              angle: 180,
               child: Text('hello'),
             ),
           ),

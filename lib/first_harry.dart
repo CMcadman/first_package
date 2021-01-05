@@ -47,6 +47,7 @@ export 'scroll_widget/as_pageview_page/as_pageview_page.dart';
 export 'scroll_widget/listview_page.dart/listview_page.dart';
 export 'scroll_widget/scrollbar_page/scrollbar_page.dart';
 export 'scroll_widget/expansionpanellist_page.dart';
+export 'scroll_widget/reorderable_listview_page.dart';
 
 export 'sliver_widget/sliver_appbar.dart';
 export 'sliver_widget/sliver_list_grid_page.dart';
