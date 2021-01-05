@@ -50,6 +50,8 @@ class _TextPageState extends State<TextPage> {
           buildSizeBox(),
           buildGraident(),
           buildSizeBox(),
+          buildSelectableText(),
+          buildSizeBox(),
           buildTextRich(),
           buildSizeBox(),
           buildTextRichSpan(),
@@ -86,11 +88,34 @@ class _TextPageState extends State<TextPage> {
               color: Colors.blue,
             ),
             child: Transform.rotate(
-              angle: 180,
+              angle: 90,
               child: Text('hello'),
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget buildSelectableText() {
+    return Container(
+      alignment: Alignment.center,
+      child: SelectableText(
+        '实况比分一款体育赛事资讯App',
+        showCursor: true,
+        autofocus: true,
+        cursorColor: Theme.of(context).accentColor,
+        cursorWidth: 2,
+        cursorRadius: Radius.circular(5),
+        toolbarOptions: ToolbarOptions(
+          copy: true,
+          selectAll: true,
+          cut: true,
+          paste: true,
+        ),
+        onTap: () {
+          print('selectableText onTap');
+        },
       ),
     );
   }

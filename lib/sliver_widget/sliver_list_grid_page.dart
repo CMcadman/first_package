@@ -25,7 +25,9 @@ class _SliverListGridPageState extends State<SliverListGridPage> {
     return CustomScrollView(
       slivers: [
         buildSliverGrid(),
-        buildSliverList(),
+        SliverSafeArea(
+          sliver: buildSliverList(),
+        ),
       ],
     );
   }

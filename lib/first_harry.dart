@@ -29,6 +29,9 @@ export 'basic_widget/datatable_page/datatable_page.dart';
 export 'basic_widget/datatable_page/paginated_datatable_page.dart';
 export 'basic_widget/draggable/draggable_page.dart';
 export 'basic_widget/future_builder_page.dart';
+export 'basic_widget/shaderMask/shadermask_page.dart';
+export 'basic_widget/stepper_page.dart';
+export 'basic_widget/stream_builder_page.dart';
 
 export 'layout_widget/stack_page.dart';
 export 'layout_widget/wrap_page.dart';
@@ -53,6 +56,7 @@ export 'sliver_widget/sliver_appbar.dart';
 export 'sliver_widget/sliver_list_grid_page.dart';
 export 'sliver_widget/nested_scrollview_page/nested_scrollview_page.dart';
 export 'sliver_widget/sliver_persistent_head/sliver_persistent_head.dart';
+export 'sliver_widget/sliver_fixed_exent_list_page.dart';
 
 export 'function_widget/caculator/caculator_page.dart';
 export 'function_widget/date_picker_page.dart';
