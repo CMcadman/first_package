@@ -1,3 +1,4 @@
+import 'package:first_harry/function_widget/as_custom_search_delegate.dart';
 import 'package:first_harry/utils/as_sizebox.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -238,6 +239,16 @@ class _PopMenuPageState extends State<PopMenuPage> {
               },
             );
           },
+        ),
+        ASSizeBox(),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: RaisedButton(
+            onPressed: () {
+              showSearch(context: context, delegate: ASCustomSearchDelegate());
+            },
+            child: Text('showSearch'),
+          ),
         ),
         ASSizeBox(),
         Container(
