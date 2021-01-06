@@ -18,6 +18,7 @@ class _BasicPageZeroState extends State<BasicPageZero> {
   var _dropValue = '英超';
   var _expanded = false;
   final List<String> _dropLists = ['英超', '西甲', '德甲', '中超', '意甲'];
+  var _toggleSeleteds = [false, false, true];
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +90,40 @@ class _BasicPageZeroState extends State<BasicPageZero> {
           buildFittedBox(),
           ASSizeBox(),
           buildChildPhysical(),
+          ASSizeBox(),
+          buildToggleButtons(),
         ],
+      ),
+    );
+  }
+
+  Widget buildToggleButtons() {
+    return Container(
+      child: ToggleButtons(
+        children: [
+          Icon(Icons.local_cafe),
+          Icon(Icons.fastfood),
+          Icon(Icons.cake),
+        ],
+        isSelected: _toggleSeleteds,
+        onPressed: (index) {
+          setState(() {
+            _toggleSeleteds[index] = !_toggleSeleteds[index];
+          });
+        },
+        color: Colors.green,
+        selectedColor: Theme.of(context).accentColor,
+        fillColor: Colors.amber,
+        renderBorder: true, // 边框
+        borderRadius: BorderRadius.circular(20),
+        borderColor: Colors.purple,
+        borderWidth: 2,
+        selectedBorderColor: Colors.deepPurple,
+        splashColor: Colors.pink,
+        highlightColor: Colors.orange,
+        disabledColor: Colors.grey, // 禁用状态下颜色
+        disabledBorderColor: Colors.blueGrey,
+        hoverColor: Colors.cyan, // 鼠标悬停颜色
       ),
     );
   }
