@@ -245,7 +245,10 @@ class _PopMenuPageState extends State<PopMenuPage> {
           padding: EdgeInsets.symmetric(horizontal: 10),
           child: RaisedButton(
             onPressed: () {
-              showSearch(context: context, delegate: ASCustomSearchDelegate());
+              showSearch(
+                context: context,
+                delegate: ASCustomSearchDelegate(hintText: '搜索'),
+              );
             },
             child: Text('showSearch'),
           ),

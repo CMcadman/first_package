@@ -3,6 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class ASCustomSearchDelegate extends SearchDelegate<String> {
+  final String hintText;
+  ASCustomSearchDelegate({Key key, this.hintText})
+      : super(searchFieldLabel: hintText);
+
   /// 返回输入搜索框后面的组件
   @override
   List<Widget> buildActions(BuildContext context) {
